@@ -2,18 +2,19 @@ import illustrationHero from "../../assets/images/illustration-hero.svg";
 
 const Hero = () => {
   return (
-    <main className="w-10/12 mt-16 m-auto  lg:max-w-screen-xl lg:flex lg:flex-row-reverse lg:justify-between lg:items-center">
-      <div className="mb-10 m-auto">
-        <img src={illustrationHero} alt="" />
-        {/* <div className=""></div> */}
+    <main className="w-10/12 mx-auto min-h-[800px] flex flex-col justify-center lg:max-w-screen-xl lg:flex lg:flex-row-reverse lg:justify-between lg:items-center">
+      <div className="mb-8 md:mb-0 relative">
+        <img src={illustrationHero} alt="" className="m-auto" />
+        {/* FIXME */}
+        {/* <div className="absolute -z-10 bottom-10 -right-20 bg-blue-700 h-60 max-w-[300px] w-full rounded-s-full"></div> */}
       </div>
 
-      <div className="lg:max-w-[430px]">
-        <h1 className="text-3xl font-medium text-center mb-5 lg:text-left lg:text-4xl">
+      <div className="lg:max-w-[450px]">
+        <h1 className="text-3xl font-medium text-center mb-8 lg:text-left lg:text-[2.625rem]">
           A Simple Bookmark Manager
         </h1>
-        <p className="text-grayish-blue text-center mb-6 lg:text-left">
-          A clean and simple interface to organize your favourite websites. Open
+        <p className="text-grayish-blue text-center mb-8 lg:text-left">
+          A clean and simple interface to organize your favorite websites. Open
           a new browser tab and see your sites load instantly. Try it for free.
         </p>
         <div className="flex items-center justify-between flex-wrap gap-3 m-auto max-w-[380px] lg:m-0">
