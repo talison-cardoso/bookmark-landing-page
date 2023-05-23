@@ -13,7 +13,7 @@ const Hero = () => {
         <h1 className="text-3xl font-medium text-center mb-8 lg:text-left lg:text-[2.625rem]">
           A Simple Bookmark Manager
         </h1>
-        <p className="text-grayish-blue text-center mb-8 lg:text-left">
+        <p className="text-base text-grayish-blue text-center mb-8 lg:text-left">
           A clean and simple interface to organize your favorite websites. Open
           a new browser tab and see your sites load instantly. Try it for free.
         </p>
