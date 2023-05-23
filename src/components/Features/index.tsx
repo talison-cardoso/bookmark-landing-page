@@ -15,8 +15,8 @@ const Features = () => {
   const { description, source_image, title } = tabSelected;
 
   return (
-    <section className="w-10/12 max-w-screen-xl mx-auto mb-32">
-      <h1 className="text-center text-3xl font-medium mb-8">Features</h1>
+    <section className="w-10/12 max-w-screen-xl mx-auto mb-44">
+      <h2 className="text-center text-3xl font-medium mb-8">Features</h2>
       <p className="text-base text-center m-auto max-w-[520px] text-grayish-blue ">
         Our aim is to make it quick and easy for you to access your favorite
         websites. Your bookmarks sync between your devices so you can access
