@@ -2,7 +2,7 @@ import illustrationHero from "../../assets/images/illustration-hero.svg";
 
 const Hero = () => {
   return (
-    <main className="w-10/12 mx-auto min-h-[800px] flex flex-col justify-center lg:max-w-screen-xl lg:flex lg:flex-row-reverse lg:justify-between lg:items-center">
+    <main className="w-10/12 mx-auto min-h-[800px] sm:mb-20 lg:mb-0 flex flex-col justify-center lg:max-w-screen-xl lg:flex lg:flex-row-reverse lg:justify-between lg:items-center">
       <div className="mb-8 md:mb-0 relative">
         <img src={illustrationHero} alt="" className="m-auto" />
         {/* FIXME */}
@@ -13,7 +13,7 @@ const Hero = () => {
         <h1 className="text-3xl font-medium text-center mb-8 lg:text-left lg:text-[2.625rem]">
           A Simple Bookmark Manager
         </h1>
-        <p className="text-base text-grayish-blue text-center mb-8 lg:text-left">
+        <p className="text-grayish-blue text-center mb-8 mx-auto max-w-[600px] lg:text-left">
           A clean and simple interface to organize your favorite websites. Open
           a new browser tab and see your sites load instantly. Try it for free.
         </p>

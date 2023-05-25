@@ -12,9 +12,6 @@ export default {
       fontFamily: {
         "sans": "Rubik, sans-serif"
       },
-      fontSize: {
-        "base": "1.125rem"
-      }
     },
   },
   plugins: [],

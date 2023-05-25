@@ -11,13 +11,13 @@ interface ICard {
 
 const Downloads = () => {
   return (
-    <section className="w-10/12 max-w-screen-xl mx-auto mb-28 ">
-      <h2 className="text-center text-3xl font-medium mb-8">
+    <section className="w-10/12 max-w-screen-xl mx-auto mb-40 ">
+      <h2 className="text-center text-2xl md:text-3xl font-medium mb-8">
         Download the extension
       </h2>
-      <p className="text-base text-center m-auto max-w-[550px] text-grayish-blue ">
-        We’ve got more browsers in the pipeline. Please do let us know if you’ve
-        got a favorite you’d like us to prioritize.
+      <p className="text-center m-auto max-w-[525px] text-grayish-blue ">
+        We&#8217;ve got more browsers in the pipeline. Please do let us know if you&#8217;ve
+        got a favorite you&#8217;d like us to prioritize.
       </p>
       <div className="flex gap-9 flex-wrap items-start justify-center mt-14 min-h-[450px]">
         <Card logo={logoChrome} browser="Chrome" version="62" />

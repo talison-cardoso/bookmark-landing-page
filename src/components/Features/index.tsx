@@ -15,9 +15,11 @@ const Features = () => {
   const { description, source_image, title } = tabSelected;
 
   return (
-    <section className="w-10/12 max-w-screen-xl mx-auto mb-44">
-      <h2 className="text-center text-3xl font-medium mb-8">Features</h2>
-      <p className="text-base text-center m-auto max-w-[520px] text-grayish-blue ">
+    <section className="w-10/12 max-w-screen-xl mx-auto mb-24 md:mb-44">
+      <h2 className="text-center text-2xl md:text-3xl font-medium mb-8">
+        Features
+      </h2>
+      <p className="text-center m-auto max-w-[520px] text-grayish-blue">
         Our aim is to make it quick and easy for you to access your favorite
         websites. Your bookmarks sync between your devices so you can access
         them on the go.
@@ -49,7 +51,7 @@ const Features = () => {
           <h3 className="text-2xl md:text-3xl text-center font-medium mb-6 lg:text-left">
             {title}
           </h3>
-          <p className="text-base text-center text-grayish-blue lg:text-left mb-8">
+          <p className="text-center text-grayish-blue lg:text-left mb-8">
             {description}
           </p>
           <button className="hidden whitespace-nowrap md:block max-w-xs w-full mx-auto bg-soft-blue text-white py-3 px-6 rounded lg:mx-0 lg:max-w-min">
