@@ -15,7 +15,10 @@ const Features = () => {
   const { description, source_image, title } = tabSelected;
 
   return (
-    <section className="w-10/12 max-w-screen-xl mx-auto mb-24 md:mb-44">
+    <section
+      id="features"
+      className="w-10/12 max-w-screen-xl mx-auto mb-24 md:mb-44"
+    >
       <h2 className="text-center text-2xl md:text-3xl font-medium mb-8">
         Features
       </h2>

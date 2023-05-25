@@ -47,7 +47,7 @@ const Dropdown = ({ title, desc }: IFaq) => {
           }`}
         />
       </button>
-      <p className={`text-gray-500 pb-5 ${isOpen ? "block" : "hidden"}`}>
+      <p className={`text-gray-500 pb-5 leading-8 ${isOpen ? "block" : "hidden"}`}>
         {desc}
       </p>
     </div>
