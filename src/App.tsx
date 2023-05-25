@@ -4,6 +4,7 @@ import Hero from "./components/Hero";
 import Features from "./components/Features";
 import Downloads from "./components/Download";
 import Faq from "./components/Faq";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Features />
       <Downloads />
       <Faq />
+      <Footer />
     </Fragment>
   );
 }
