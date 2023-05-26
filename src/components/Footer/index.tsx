@@ -1,4 +1,26 @@
+import { FormEvent, useState } from "react";
+import { Alert } from "../../icons";
+
 const Footer = () => {
+  const [email, setEmail] = useState("");
+  const [error, setError] = useState<string | null>(null);
+
+  function isValidEmail(email: string) {
+    return /\S+@\S+\.\S+/.test(email);
+  }
+
+  const handleChange = (event: FormEvent<HTMLInputElement>): void => {
+    const email = event.currentTarget.value;
+
+    if (!isValidEmail(email)) {
+      setError("Email is invalid");
+    } else {
+      setError(null);
+    }
+
+    setEmail(email);
+  };
+
   return (
     <footer className="">
       <section className="bg-soft-blue py-20">
@@ -13,12 +35,30 @@ const Footer = () => {
             onSubmit={(e) => e.preventDefault()}
             className="mt-11 flex flex-col items-center justify-center gap-4 md:flex-row"
           >
-            <input
-              type="text"
-              placeholder="Enter your email address"
-              className="w-full h-12 rounded pl-3 mb-5 md:mb-0 md:max-w-[400px]"
-            />
-            <button className="transition bg-soft-red  w-full text-white h-12 rounded border-soft-red border-2 md:max-w-[125px] hover:bg-white hover:text-soft-red">
+            <div
+              className={`mb-4 w-full md:mb-0 md:max-w-[400px] relative ${
+                error ? "rounded bg-soft-red p-[3px]" : ""
+              }`}
+            >
+              <input
+                type="text"
+                value={email}
+                spellCheck="false"
+                onChange={handleChange}
+                placeholder="Enter your email address"
+                className="w-full h-12 rounded pl-3"
+              />
+
+              {error && (
+                <>
+                  <Alert className="absolute right-4 top-4" />
+                  <p className="italic text-white bg-soft-red rounded-b text-xs font-medium pl-2 py-1">
+                    Whoops, make sure it's an email
+                  </p>
+                </>
+              )}
+            </div>
+            <button className="self-start transition bg-soft-red  w-full text-white h-12 rounded border-soft-red border-2 md:max-w-[125px] hover:bg-white hover:text-soft-red">
               Contact Us
             </button>
           </form>
@@ -26,7 +66,7 @@ const Footer = () => {
       </section>
 
       <section className="bg-very-dark-blue py-8 md:py-9">
-        <div className="max-w-screen-xl w-10/12 mx-auto grid items-center justify-center md:grid-cols-[230px_minmax(900px,_1fr)_100px]">
+        <div className="max-w-screen-xl w-10/12 mx-auto grid items-center justify-center md:grid-cols-[200px_1fr_100px]">
           <svg width="148" height="25" className="mx-auto md:mx-0">
             <g fill="none" fill-rule="evenodd">
               <path
