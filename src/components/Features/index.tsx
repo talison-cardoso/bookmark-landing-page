@@ -27,7 +27,6 @@ const Features = () => {
         websites. Your bookmarks sync between your devices so you can access
         them on the go.
       </p>
-
       <nav className="mt-8 mb-16 border-t md:border-t-0 md:flex md:justify-center md:mx-auto max-w-[730px]">
         {features.map((tab: ITab) => {
           return (
@@ -47,7 +46,7 @@ const Features = () => {
         })}
       </nav>
       <article className="flex flex-col items-center justify-center gap-14 max-w-[1100px] mx-auto lg:flex-row lg:justify-between">
-        <div className="mb-8 lg:mb-0 ">
+        <div className="">
           <img src={source_image} alt="" className="" />
         </div>
         <div className="max-w-[450px] w-full ">
