@@ -1,6 +1,6 @@
 import { useState } from "react";
-import iconArrow from "../../assets/images/icon-arrow.svg";
 import { faq } from "../../data/data";
+import { ArrowDown } from "../../icons";
 
 interface IFaq {
   title: string;
@@ -39,9 +39,7 @@ const Accordion = ({ title, content }: IFaq) => {
         className="w-full lg:pr-5 py-5 flex items-center justify-between gap-3 hover:text-soft-red"
       >
         <p className="text-lg text-left">{title}</p>
-        <img
-          src={iconArrow}
-          alt="Icon ArrowDown"
+        <ArrowDown
           className={`duration-300 transition-all ${
             open ? "rotate-180" : "rotate-0"
           }`}
