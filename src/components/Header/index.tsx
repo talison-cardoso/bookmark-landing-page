@@ -1,21 +1,35 @@
-import iconLogo from "../../assets/images/logo-bookmark.svg";
-import iconHamburger from "../../assets/images/icon-hamburger.svg";
+import { LogoBookmark, Hamburger } from "../../icons";
 
-// import SideBar from "../SideBar";
+import SideBar from "../SideBar";
 import NavBar from "../NavBar";
+import { useState } from "react";
 
 const Header = () => {
+  const [isOpenMenu, setIsOpenMenu] = useState(false);
+
   return (
     <header className="w-11/12 m-auto mt-8 ">
-      <div className="flex justify-between items-center">
-        <a href="/">
-          <img className="" src={iconLogo} alt="" />
-        </a>
-        <img src={iconHamburger} alt="" className="md:hidden" />
-        <div className="hidden md:block">
-          <NavBar />
-        </div>
-      </div>
+      {isOpenMenu ? (
+        <>
+          <SideBar onClick={() => setIsOpenMenu(!isOpenMenu)} />
+          {(document.body.style.overflow = "hidden")}
+        </>
+      ) : (
+        <>
+          {(document.body.removeAttribute("style"))}
+          <div className="flex justify-between items-center">
+            <a href="/">
+              <LogoBookmark />
+            </a>
+            <div className="md:hidden" onClick={() => setIsOpenMenu(!isOpenMenu)}>
+              <Hamburger className="" />
+            </div>
+            <div className="hidden md:block">
+              <NavBar />
+            </div>
+          </div>
+        </>
+      )}
     </header>
   );
 };

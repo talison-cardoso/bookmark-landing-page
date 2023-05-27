@@ -1,38 +1,51 @@
-import iconFacebook from "../../assets/images/icon-facebook.svg";
-import iconTwitter from "../../assets/images/icon-twitter.svg";
-import iconLogoNegative from "../../assets/images/logo-bookmark-negative.svg";
-import iconClose from "../../assets/images/icon-close.svg";
+import { LogoBookmark, Close, Twitter, Facebook } from "../../icons";
+import { Props } from "../../types";
 
-const SideBar = () => {
+const SideBar = ({ onClick }: Props) => {
   return (
-    <section className="min-h-screen bg-very-dark-blue font-sans">
-      <nav className="w-10/12 m-auto">
+    <section className="fixed inset-0 z-10 min-h-screen bg-very-dark-blue bg-opacity-90 select-none">
+      <div className="w-10/12 m-auto">
         <div className="flex justify-between items-center py-10">
-          <img src={iconLogoNegative} alt="" className="" />
-          <img src={iconClose} alt="" />
+          <LogoBookmark color="#fff" bg="#000" icon="#fff" />
+          <button onClick={onClick}>
+            <Close />
+          </button>
         </div>
-        <ul className="flex flex-col items-center w-full text-white text-base">
-          <li className="border-y border-gray-500 w-full text-center py-5">
-            FEATURES
-          </li>
-          <li className="w-full text-center py-5">PRICING</li>
-          <li className="border-y border-gray-500 w-full text-center py-5">
-            CONTACT
-          </li>
-        </ul>
-        <button
-          className="border-2 w-full py-4 text-white text-base font-semibold tracking-[.2rem] rounded-md mt-6"
-          type="button"
-        >
-          LOGIN
-        </button>
-      </nav>
-      <div className="flex justify-between items-center m-auto absolute bottom-10 left-1/2 -translate-x-1/2 w-28">
+        <nav>
+          <ul className="flex flex-col items-center w-full text-white text-base">
+            <li
+              className="border-y border-gray-500 w-full py-5 text-center"
+              onClick={onClick}
+            >
+              <a href="#features" className="tracking-[0.25rem]">
+                FEATURES
+              </a>
+            </li>
+            <li className="w-full text-center py-5">
+              <a href="#" className="tracking-[0.25rem]">
+                PRICING
+              </a>
+            </li>
+            <li className="border-y border-gray-500 w-full text-center py-5">
+              <a href="#" className="tracking-[0.25rem]">
+                CONTACT
+              </a>
+            </li>
+          </ul>
+          <button
+            className="border-2 w-full py-4 text-white text-base font-semibold tracking-[.2rem] rounded-md mt-6"
+            type="button"
+          >
+            LOGIN
+          </button>
+        </nav>
+      </div>
+      <div className="flex justify-between items-center gap-10 m-auto absolute bottom-10 left-1/2 -translate-x-1/2 ">
         <a href="#">
-          <img src={iconFacebook} alt="" className="w-8 h-full" />
+          <Facebook className="fill-white" />
         </a>
         <a href="#">
-          <img src={iconTwitter} alt="" className="w-8 h-full" />
+          <Twitter className="fill-white" />
         </a>
       </div>
     </section>
