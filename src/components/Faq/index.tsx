@@ -4,7 +4,7 @@ import { faq } from "../../data/data";
 
 interface IFaq {
   title: string;
-  desc: string;
+  content: string;
 }
 
 const Faq = () => {
@@ -19,7 +19,7 @@ const Faq = () => {
       </p>
       <div className="mt-8 md:border-t border-gray-300 max-w-[545px] mx-auto">
         {faq.map((f: IFaq) => (
-          <Dropdown title={f.title} desc={f.desc} />
+          <Accordion key={f.title} title={f.title} content={f.content} />
         ))}
       </div>
       <button className="mt-12 block mx-auto bg-soft-blue text-white py-3 px-6 rounded ">
@@ -29,13 +29,13 @@ const Faq = () => {
   );
 };
 
-const Dropdown = ({ title, desc }: IFaq) => {
-  const [isOpen, setIsOpen] = useState(false);
+const Accordion = ({ title, content }: IFaq) => {
+  const [open, setOpen] = useState(false);
 
   return (
     <div className="border-b border-gray-300">
       <button
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={() => setOpen(!open)}
         className="w-full lg:pr-5 py-5 flex items-center justify-between gap-3 hover:text-soft-red"
       >
         <p className="text-lg text-left">{title}</p>
@@ -43,13 +43,17 @@ const Dropdown = ({ title, desc }: IFaq) => {
           src={iconArrow}
           alt="Icon ArrowDown"
           className={`duration-300 transition-all ${
-            isOpen ? "rotate-180" : "rotate-0"
+            open ? "rotate-180" : "rotate-0"
           }`}
         />
       </button>
-      <p className={`text-gray-500 pb-5 leading-8 ${isOpen ? "block" : "hidden"}`}>
-        {desc}
-      </p>
+      <div
+        className={`text-gray-500 leading-8 grid ${
+          open ? "openAccordion pb-5" : "closeAccordion"
+        }`}
+      >
+        <p className="overflow-hidden">{content}</p>
+      </div>
     </div>
   );
 };
