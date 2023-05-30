@@ -10,7 +10,7 @@ interface ICard {
 const Downloads = () => {
   return (
     <section className="w-10/12 max-w-screen-xl mx-auto mb-40 ">
-      <h2 className="text-center text-2xl md:text-3xl font-medium mb-8">
+      <h2 className="text-center text-3xl font-medium mb-8">
         Download the extension
       </h2>
       <p className="text-center m-auto max-w-[525px] text-grayish-blue ">

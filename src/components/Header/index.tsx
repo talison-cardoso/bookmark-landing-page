@@ -10,9 +10,7 @@ const Header = () => {
   return (
     <header className="w-11/12 m-auto mt-8 ">
       {isOpenMenu ? (
-        <>
-          <SideBar onCloseMenu={() => setIsOpenMenu(!isOpenMenu)} />
-        </>
+        <SideBar onCloseMenu={() => setIsOpenMenu(!isOpenMenu)} />
       ) : (
         <>
           {document.body.removeAttribute("style")}
