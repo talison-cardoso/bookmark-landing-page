@@ -7,13 +7,11 @@ html {
 }
 
 .closeAccordion {
-  /* display: grid; */
   grid-template-rows: 0fr;
   transition: grid-template-rows 500ms;
 }
 
 .openAccordion {
-  /* display: grid; */
   transition: grid-template-rows 500ms;
   grid-template-rows: 1fr;
 }

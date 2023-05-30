@@ -1,5 +1,5 @@
-import { useState, useContext } from "react";
-import { FeaturesContext } from "../../contexts/FeaturesContext";
+import { useState } from "react";
+import { features } from "../../data/data";
 
 interface ITab {
   tab: string;
@@ -9,8 +9,6 @@ interface ITab {
 }
 
 const Features = () => {
-  const features = useContext(FeaturesContext);
-
   const [tabSelected, setTabSelected] = useState(features[0]);
   const { description, source_image, title } = tabSelected;
 
@@ -19,7 +17,7 @@ const Features = () => {
       id="features"
       className="w-10/12 max-w-screen-xl mx-auto mb-24 md:mb-44"
     >
-      <h2 className="text-center text-2xl md:text-3xl font-medium mb-8">
+      <h2 className="text-center text-3xl font-medium mb-8">
         Features
       </h2>
       <p className="text-center m-auto max-w-[520px] text-grayish-blue">
