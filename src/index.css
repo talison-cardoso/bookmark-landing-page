@@ -8,10 +8,10 @@ html {
 
 .closeAccordion {
   grid-template-rows: 0fr;
-  transition: grid-template-rows 500ms;
+  transition: grid-template-rows 300ms;
 }
 
 .openAccordion {
-  transition: grid-template-rows 500ms;
+  transition: grid-template-rows 300ms;
   grid-template-rows: 1fr;
 }
