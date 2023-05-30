@@ -1,21 +1,21 @@
 import { LogoBookmark, Close, Twitter, Facebook } from "../../icons";
 import { Props } from "../../types";
 
-const SideBar = ({ onClick }: Props) => {
+const SideBar = ({ onCloseMenu }: Props) => {
   return (
-    <section className="fixed inset-0 z-10 min-h-screen bg-very-dark-blue bg-opacity-90 select-none">
+    <section className="absolute inset-0 z-10 min-h-screen bg-very-dark-blue bg-opacity-90 select-none">
       <div className="w-10/12 m-auto">
         <div className="flex justify-between items-center py-10">
           <LogoBookmark color="#fff" bg="#000" icon="#fff" />
-          <button onClick={onClick}>
+          <button onClick={onCloseMenu}>
             <Close />
           </button>
         </div>
-        <nav>
+        <nav onClick={onCloseMenu}>
           <ul className="flex flex-col items-center w-full text-white text-base">
             <li
               className="border-y border-gray-500 w-full py-5 text-center"
-              onClick={onClick}
+
             >
               <a href="#features" className="tracking-[0.25rem]">
                 FEATURES

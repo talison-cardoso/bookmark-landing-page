@@ -36,7 +36,7 @@ const Footer = () => {
             className="mt-11 flex flex-col items-center justify-center gap-4 md:flex-row"
           >
             <div
-              className={`mb-4 w-full md:mb-0 md:max-w-[400px] relative ${
+              className={`w-full md:mb-0 md:max-w-[400px] relative ${
                 error ? "rounded bg-soft-red p-[3px]" : ""
               }`}
             >
@@ -53,7 +53,7 @@ const Footer = () => {
                 <>
                   <Alert className="absolute right-4 top-4" />
                   <p className="italic text-white bg-soft-red rounded-b text-xs font-medium pl-2 py-1">
-                    Whoops, make sure it's an email
+                    {error}
                   </p>
                 </>
               )}

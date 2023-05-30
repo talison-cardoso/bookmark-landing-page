@@ -11,17 +11,19 @@ const Header = () => {
     <header className="w-11/12 m-auto mt-8 ">
       {isOpenMenu ? (
         <>
-          <SideBar onClick={() => setIsOpenMenu(!isOpenMenu)} />
-          {(document.body.style.overflow = "hidden")}
+          <SideBar onCloseMenu={() => setIsOpenMenu(!isOpenMenu)} />
         </>
       ) : (
         <>
-          {(document.body.removeAttribute("style"))}
+          {document.body.removeAttribute("style")}
           <div className="flex justify-between items-center">
             <a href="/">
               <LogoBookmark />
             </a>
-            <div className="md:hidden" onClick={() => setIsOpenMenu(!isOpenMenu)}>
+            <div
+              className="md:hidden"
+              onClick={() => setIsOpenMenu(!isOpenMenu)}
+            >
               <Hamburger className="" />
             </div>
             <div className="hidden md:block">
