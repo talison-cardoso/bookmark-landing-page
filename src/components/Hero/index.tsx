@@ -3,10 +3,9 @@ import illustrationHero from "../../assets/images/illustration-hero.svg";
 const Hero = () => {
   return (
     <main className="w-10/12 mx-auto min-h-[800px] sm:mb-20 lg:mb-0 flex flex-col justify-center lg:max-w-screen-xl lg:flex lg:flex-row-reverse lg:justify-between lg:items-center">
-      <div className="mb-8 md:mb-0 relative">
+      <div className="mb-12 lg:mb-0 relative">
         <img src={illustrationHero} alt="" className="m-auto" />
-        {/* FIXME */}
-        {/* <div className="absolute -z-10 bottom-10 -right-20 bg-blue-700 h-60 max-w-[300px] w-full rounded-s-full"></div> */}
+        <div className="absolute -z-10 bottom-0 -right-[10%] lg:-right-[18%] bg-soft-blue max-w-[80%] max-h-[70%] w-full h-full rounded-s-full"></div>
       </div>
 
       <div className="lg:max-w-[450px]">

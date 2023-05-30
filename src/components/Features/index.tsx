@@ -46,8 +46,10 @@ const Features = () => {
         })}
       </nav>
       <article className="flex flex-col items-center justify-center gap-14 max-w-[1100px] mx-auto lg:flex-row lg:justify-between">
-        <div className="">
+        <div className="relative mb-6 sm:mb-16 lg:mb-0 ">
           <img src={source_image} alt="" className="" />
+          {/* <div className="absolute -z-10 -bottom-20 -left-[20%] lg:-left-[40%] bg-soft-blue max-w-[90%] max-h-[70%] w-full h-full rounded-e-full"></div> */}
+          <div className="absolute -z-10 -bottom-10 lg:-bottom-16 -left-10 md:-left-24 bg-soft-blue max-h-[180px] sm:max-h-[350px] w-full h-full rounded-e-full"></div>
         </div>
         <div className="max-w-[450px] w-full ">
           <h3 className="text-2xl md:text-3xl text-center font-medium mb-6 lg:text-left">

@@ -3,7 +3,7 @@ import { Props } from "../../types";
 
 const SideBar = ({ onCloseMenu }: Props) => {
   return (
-    <section className="absolute inset-0 z-10 min-h-screen bg-very-dark-blue bg-opacity-90 select-none">
+    <section className="absolute inset-0 z-10 min-h-[100svh] bg-very-dark-blue bg-opacity-90 select-none">
       <div className="w-10/12 m-auto">
         <div className="flex justify-between items-center py-10">
           <LogoBookmark color="#fff" bg="#000" icon="#fff" />
@@ -11,12 +11,9 @@ const SideBar = ({ onCloseMenu }: Props) => {
             <Close />
           </button>
         </div>
-        <nav onClick={onCloseMenu}>
+        <nav>
           <ul className="flex flex-col items-center w-full text-white text-base">
-            <li
-              className="border-y border-gray-500 w-full py-5 text-center"
-
-            >
+            <li className="border-y border-gray-500 w-full py-5 text-center">
               <a href="#features" className="tracking-[0.25rem]">
                 FEATURES
               </a>
