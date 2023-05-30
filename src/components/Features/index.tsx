@@ -17,7 +17,7 @@ const Features = () => {
       id="features"
       className="w-10/12 max-w-screen-xl mx-auto mb-24 md:mb-44"
     >
-      <h2 className="text-center text-2xl md:text-3xl font-medium mb-8">
+      <h2 className="text-center text-2xl sm:text-3xl font-medium mb-8">
         Features
       </h2>
       <p className="text-center m-auto max-w-[520px] text-grayish-blue">
