@@ -10,7 +10,7 @@ interface IFaq {
 const Faq = () => {
   return (
     <section className="w-10/12 mx-auto mb-40">
-      <h2 className="text-center text-3xl font-medium mb-8">
+      <h2 className="text-center text-2xl md:text-3xl font-medium mb-8">
         Frequently Asked Questions
       </h2>
       <p className="text-base text-center m-auto max-w-[540px] text-grayish-blue ">
