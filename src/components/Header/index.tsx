@@ -12,23 +12,20 @@ const Header = () => {
       {isOpenMenu ? (
         <SideBar onCloseMenu={() => setIsOpenMenu(!isOpenMenu)} />
       ) : (
-        <>
-          {document.body.removeAttribute("style")}
-          <div className="flex justify-between items-center">
-            <a href="/">
-              <LogoBookmark />
-            </a>
-            <div
-              className="md:hidden"
-              onClick={() => setIsOpenMenu(!isOpenMenu)}
-            >
-              <Hamburger className="" />
-            </div>
-            <div className="hidden md:block">
-              <NavBar />
-            </div>
+        <div className="flex justify-between items-center">
+          <a href="/">
+            <LogoBookmark />
+          </a>
+          <div
+            className="md:hidden"
+            onClick={() => setIsOpenMenu(!isOpenMenu)}
+          >
+            <Hamburger />
           </div>
-        </>
+          <div className="hidden md:block">
+            <NavBar />
+          </div>
+        </div>
       )}
     </header>
   );

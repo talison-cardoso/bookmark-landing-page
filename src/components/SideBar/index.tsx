@@ -14,17 +14,17 @@ const SideBar = ({ onCloseMenu }: Props) => {
         <nav>
           <ul className="flex flex-col items-center w-full text-white text-base">
             <li className="border-y border-gray-500 w-full py-5 text-center">
-              <a href="#features" className="tracking-[0.25rem]">
+              <a href="#features" className="tracking-[0.25rem]" onClick={onCloseMenu}>
                 FEATURES
               </a>
             </li>
             <li className="w-full text-center py-5">
-              <a href="#" className="tracking-[0.25rem]">
+              <a href="#" className="tracking-[0.25rem]" onClick={onCloseMenu}>
                 PRICING
               </a>
             </li>
             <li className="border-y border-gray-500 w-full text-center py-5">
-              <a href="#" className="tracking-[0.25rem]">
+              <a href="#" className="tracking-[0.25rem]" onClick={onCloseMenu}>
                 CONTACT
               </a>
             </li>
